@@ -159,6 +159,8 @@ namespace PrintableEditor
 
         void SaveStep()
         {
+            LoadSteps(lb_steps.SelectedIndex);
+
             guide.steps[loadedStep].heading = tb_stephead.Text;
             guide.steps[loadedStep].img = tb_stepimg.Text;
             guide.steps[loadedStep].description = rtb_stepdesc.Text;
