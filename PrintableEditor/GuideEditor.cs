@@ -159,14 +159,14 @@ namespace PrintableEditor
 
         void SaveStep()
         {
-            LoadSteps(lb_steps.SelectedIndex);
-
             guide.steps[loadedStep].heading = tb_stephead.Text;
             guide.steps[loadedStep].img = tb_stepimg.Text;
             guide.steps[loadedStep].description = rtb_stepdesc.Text;
 
             //replace all \u000b with \n
             guide.steps[loadedStep].description = guide.steps[loadedStep].description.Replace("\u000b", "\n");
+
+            LoadSteps(lb_steps.SelectedIndex);
         }
 
         private void button_savestep_Click(object sender, EventArgs e)
